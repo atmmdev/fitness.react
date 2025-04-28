@@ -13,7 +13,7 @@
 
 ## Description
 
-Portfolio created with Bootstrap 5.3, Docker, Dockerfile and WordPress using Custom Post Types, Advanced Custom Fields and Elementor.
+This is a project made with React and Bootstrap, for Bodybuilding training, separated by weeks and days.
 
 ## Screens Layout
 
