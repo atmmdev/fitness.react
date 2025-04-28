@@ -1,8 +1,10 @@
-export default function Header() {
+import React from "react";
+
+export default function Header({ groups }) {
   return (
     <>
       <h1>TREINOS</h1>
-      <small>Peito + Tríceps + Cardio</small>
+      <small>{groups}</small>
     </>
   );
 }

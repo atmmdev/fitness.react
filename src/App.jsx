@@ -1,95 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+// Components
 import Header from "./components/Header";
 import DaySelector from "./components/DaySelector";
 import WeekSelector from "./components/WeekSelector";
+import ExerciseCard from "./components/ExerciseCard";
+// Exercises
+import { WORKOUTS } from "./data/workouts";
 
 function App() {
+  const [selectedWeek, setSelectedWeek] = useState(WORKOUTS[0].week);
+  const [selectedDay, setSelectedDay] = useState("Segunda");
+
+  const selectedDayObject = WORKOUTS.find(
+    (w) => w.week === selectedWeek
+  )?.weekday.find((d) => d.day === selectedDay);
+
   return (
     <>
       <main className="container mt-5 text-center">
         <section className="my-4">
-          <WeekSelector /> 
+          <WeekSelector
+            selectedWeek={selectedWeek}
+            setSelectedWeek={setSelectedWeek}
+            setSelectedDay={setSelectedDay}
+          />
         </section>
 
-        <Header />
+        <Header groups={selectedDayObject?.group || "Selecione um dia"} />
 
         <section className="my-4">
-          <DaySelector />
+          <DaySelector
+            selectedWeek={selectedWeek}
+            selectedDay={selectedDay}
+            setSelectedDay={setSelectedDay}
+          />
         </section>
 
         <section className="row">
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
-          <div className="col-6 col-md-3 my-2">
-            <img
-              className="img-fluid rounded"
-              src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif"
-              alt="Crossover de Cabo Baixo"
-            />
-            <div className="my-2">Crossover de Cabo Baixo</div>
-          </div>
+          {selectedDayObject?.exercises.map((exercise, index) => (
+            <ExerciseCard key={index} exercise={exercise} />
+          ))}
         </section>
       </main>
     </>
