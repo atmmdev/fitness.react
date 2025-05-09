@@ -1,30 +1,29 @@
 import React from "react";
 // Components
 import Button from "./Button";
-// Exercices
-import { WORKOUTS } from "../data/workouts";
 
 export default function WeekSelector({
   selectedWeek,
   setSelectedWeek,
   setSelectedDay,
+  weeks,
 }) {
   return (
     <>
-      {WORKOUTS.map((w, index) => (
+      {weeks.map((week, index) => (
         <Button
           key={index}
           onClick={() => {
-            setSelectedWeek(w.week);
+            setSelectedWeek(week);
             setSelectedDay("");
           }}
           className={
-            selectedWeek === w.week
+            selectedWeek === week
               ? "btn btn-outline-light active m-2"
               : "btn btn-outline-light m-2"
           }
         >
-          {w.week}
+          {week}
         </Button>
       ))}
     </>

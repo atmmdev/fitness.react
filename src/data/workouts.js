@@ -39,14 +39,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Tricep-Kickback.gif",
           },
           {
-            exerciseName: "Abdominal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
-          },
-          {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
-          },
-          {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
           },
@@ -57,40 +49,37 @@ export const WORKOUTS = [
         group: "Pernas (Quadríceps + Glúteos) + Cardio",
         exercises: [
           {
-            exerciseName: "Agachamento com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
+            exerciseName: "Leg Press Horizontal",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Lever-Horizontal-Leg-Press.gif",
           },
           {
             exerciseName: "Leg Press 45°",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif"
+            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif",
           },
           {
             exerciseName: "Cadeira Extensora",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
           },
           {
+            exerciseName: "Agachamento com Halteres",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
+          },
+          {
             exerciseName: "Afundo com Halteres",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
           },
-          {
-            exerciseName: "Leg Press Horizontal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Lever-Horizontal-Leg-Press.gif",
-          },
+
           {
             exerciseName: "Abdominal",
             img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
           },
           {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
+            exerciseName: "Prancha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
           },
           {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
-          },
-          {
-            exerciseName: "Prancha",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
           },
         ],
       },
@@ -104,7 +93,7 @@ export const WORKOUTS = [
           },
           {
             exerciseName: "Elevação Lateral com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif"
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
           },
           {
             exerciseName: "Elevação Frontal alternada com Halteres",
@@ -129,10 +118,6 @@ export const WORKOUTS = [
           {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
-          },
-          {
-            exerciseName: "Prancha",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
           },
         ],
       },
@@ -173,14 +158,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/rope-bicep-curls.gif",
           },
           {
-            exerciseName: "Abdominal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
-          },
-          {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
-          },
-          {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
           },
@@ -191,12 +168,16 @@ export const WORKOUTS = [
         group: "Pernas (Posteriores + Glúteos) + Cardio",
         exercises: [
           {
+            exerciseName: "Hack Squat na Máquina",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Sled-Hack-Squat.gif",
+          },
+          {
             exerciseName: "Flexão de Perna",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif",
           },
           {
-            exerciseName: "Hack Squat na Máquina",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Sled-Hack-Squat.gif",
+            exerciseName: "Cadeira Flexora Sentado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif",
           },
           {
             exerciseName: "Cadeira Adutora",
@@ -207,24 +188,16 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HiP-ABDUCTION-MACHINE.gif",
           },
           {
-            exerciseName: "Cadeira Flexora Sentado",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif",
-          },
-          {
-            exerciseName: "Abdominal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
-          },
-          {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
-          },
-          {
-            exerciseName: "Caminhada na Esteira - Inclinação 8º",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+            exerciseName: "Panturrilha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Lever-Seated-Calf-Raise.gif",
           },
           {
             exerciseName: "Prancha",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
+          },
+          {
+            exerciseName: "Caminhada 20 min. - Inclinação 9º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
           },
         ],
       },
@@ -258,24 +231,12 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Decline-Chest-Press-Machine.gif",
           },
           {
-            exerciseName: "Tríceps Testa no Banco",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Triceps-Extension.gif",
-          },
-          {
             exerciseName: "Tríceps com Halteres Sentado",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Seated-Dumbbell-Triceps-Extension.gif",
           },
           {
-            exerciseName: "Tríceps com Halteres na Cadeira Inclinada",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Dumbbell-Incline-Two-Arm-Extension.gif",
-          },
-          {
-            exerciseName: "Abdominal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
-          },
-          {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
+            exerciseName: "Tríceps na Polia",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Rope-Pushdown.gif",
           },
           {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
@@ -288,62 +249,55 @@ export const WORKOUTS = [
         group: "Pernas (Quadríceps + Glúteos) + Cardio",
         exercises: [
           {
-            exerciseName: "Agachamento com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
+            exerciseName: "Leg Press Horizontal",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Lever-Horizontal-Leg-Press.gif",
           },
           {
             exerciseName: "Leg Press 45°",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif"
+            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif",
           },
           {
             exerciseName: "Cadeira Extensora",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
           },
           {
+            exerciseName: "Agachamento com Halteres",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
+          },
+          {
             exerciseName: "Afundo com Halteres",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
           },
-          {
-            exerciseName: "Leg Press Horizontal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Lever-Horizontal-Leg-Press.gif",
-          },
+
           {
             exerciseName: "Abdominal",
             img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
           },
           {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
+            exerciseName: "Prancha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
           },
           {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
-          },
-          {
-            exerciseName: "Prancha",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
           },
         ],
       },
       {
         day: "Quarta",
         group: "Ombro + Trapézio + Cardio",
-        exercises: [ 
+        exercises: [
+          {
+            exerciseName: "Elevação Frontal com Anilha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif",
+          },
           {
             exerciseName: "Extensão de Ombro na Polia",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Two-Arm-Cable-Front-Raise.gif",
           },
           {
-            exerciseName: "Elevação Lateral com Halter",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Leaning-Single-Arm-Dumbbell-Lateral-Raise.gif"
-          },
-          {
             exerciseName: "Elevação Lateral Sentao com Halteres",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Seated-Dumbbell-Lateral-Raise.gif",
-          },
-          {
-            exerciseName: "Elevação Fornteal com Anilha",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif",
           },
           {
             exerciseName: "Remada Vertical na Polia",
@@ -358,12 +312,12 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Rear-Delt-Machine-Flys.gif",
           },
           {
-            exerciseName: "Caminhada na Esteira - Inclinação 8º",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
-          },
-          {
             exerciseName: "Prancha",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
+          },
+          {
+            exerciseName: "Caminhada na Esteira - Inclinação 8º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
           },
         ],
       },
@@ -408,8 +362,199 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
           },
           {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
+            exerciseName: "Caminhada na Esteira - Inclinação 8º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+          },
+        ],
+      },
+      {
+        day: "Sexta",
+        group: "Pernas (Posteriores + Glúteos) + Cardio",
+        exercises: [
+          {
+            exerciseName: "Hack Squat na Máquina",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Sled-Hack-Squat.gif",
+          },
+          {
+            exerciseName: "Flexão de Perna",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif",
+          },
+          {
+            exerciseName: "Cadeira Flexora Sentado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif",
+          },
+          {
+            exerciseName: "Cadeira Adutora",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HIP-ADDUCTION-MACHINE.gif",
+          },
+          {
+            exerciseName: "Cadeira Abdutora",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HiP-ABDUCTION-MACHINE.gif",
+          },
+          {
+            exerciseName: "Panturrilha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Lever-Seated-Calf-Raise.gif",
+          },
+          {
+            exerciseName: "Prancha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
+          },
+          {
+            exerciseName: "Caminhada 20 min. - Inclinação 9º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    week: "Semana 03",
+    weekday: [
+      {
+        day: "Segunda",
+        group: "Peito + Tríceps + Cardio",
+        exercises: [
+          {
+            exerciseName: "Maquina Supino Reto Inclinada",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/09/Lever-Incline-Hammer-Chest-Press.gif",
+          },
+          {
+            exerciseName: "Maquina Supino Interno",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Inner-Chest-Press-Machine.gif",
+          },
+          {
+            exerciseName: "Supino com halteres pegada fechada",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/10/Close-Grip-Dumbbell-Press.gif",
+          },
+          {
+            exerciseName: "Supino com Halteres alternado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/09/Alternate-Dumbbell-Bench-Press.gif",
+          },
+          {
+            exerciseName: "Supino com halteres pegada inversa",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Reverse-Grip-Dumbbell-Bench-Press.gif",
+          },
+          {
+            exerciseName: "Tríceps com Halteres Alternado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/09/Dumbbell-Seated-Front-and-Back-Tate-Press.gif",
+          },
+          {
+            exerciseName: "Extensão de tríceps na cadeira",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Seated-One-Arm-Dumbbell-Triceps-Extension.gif",
+          },
+          {
+            exerciseName: "Caminhada na Esteira - Inclinação 8º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+          },
+        ],
+      },
+      {
+        day: "Terça",
+        group: "Pernas (Quadríceps + Glúteos) + Cardio",
+        exercises: [
+          {
+            exerciseName: "Leg Press Horizontal",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Lever-Horizontal-Leg-Press.gif",
+          },
+          {
+            exerciseName: "Leg Press 45°",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif",
+          },
+          {
+            exerciseName: "Cadeira Extensora",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
+          },
+          {
+            exerciseName: "Agachamento com Halteres",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
+          },
+          {
+            exerciseName: "Afundo com Halteres",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
+          },
+          {
+            exerciseName: "Abdominal",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
+          },
+          {
+            exerciseName: "Prancha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
+          },
+          {
+            exerciseName: "Caminhada na Esteira - Inclinação 8º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+          },
+        ],
+      },
+      {
+        day: "Quarta",
+        group: "Ombro + Trapézio + Cardio",
+        exercises: [
+          {
+            exerciseName: "Rotação Externa na Polia",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Cable-Internal-Shoulder-Rotation.gif",
+          },
+          {
+            exerciseName: "Elevação lateral na polia",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Lateral-Raise.gif",
+          },
+          {
+            exerciseName: "Remada Vertical com Halteres",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Dumbbell-Upright-Row.gif",
+          },
+          {
+            exerciseName: "Elevação Lateral no Banco Inclinado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Dumbbell-Side-Lateral-Raise.gif",
+          },
+          {
+            exerciseName: "Puxada Facial",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif",
+          },
+          {
+            exerciseName: "Crucifixo Inverso na Maquina",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Rear-Delt-Machine-Flys.gif",
+          },
+          {
+            exerciseName: "Prancha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
+          },
+          {
+            exerciseName: "Caminhada na Esteira - Inclinação 8º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+          },
+        ],
+      },
+      {
+        day: "Quinta",
+        group: "Costas + Bíceps + Cardio",
+        exercises: [
+          {
+            exerciseName: "Remada Curvada com Barra",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bent-Over-Row.gif",
+          },
+          {
+            exerciseName: "Puxada Alta com Pegada fechada",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Close-Grip-Lat-Pulldown.gif",
+          },
+          {
+            exerciseName: "Alavanca de Remada Alta",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2023/06/Lever-High-Row.gif",
+          },
+          {
+            exerciseName: "Remada Alternada com cabo sentado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2022/02/Single-Arm-Twisting-Seated-Cable-Row.gif",
+          },
+          {
+            exerciseName: "Rosca Concentrada",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif",
+          },
+          {
+            exerciseName: "Rosca com barra W pegada fechada",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Close-Grip-Z-Bar-Curl.gif",
+          },
+          {
+            exerciseName: "Rosca naPolia com barra reta",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/cable-curl.gif",
           },
           {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
@@ -422,40 +567,36 @@ export const WORKOUTS = [
         group: "Pernas (Posteriores + Glúteos) + Cardio",
         exercises: [
           {
-            exerciseName: "Flexão de Perna",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif",
-          },
-          {
             exerciseName: "Hack Squat na Máquina",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Sled-Hack-Squat.gif",
           },
           {
-            exerciseName: "Cadeira Adbutora",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HIP-ADDUCTION-MACHINE.gif",
-          },
-          {
-            exerciseName: "Cadeira Adutora",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HiP-ABDUCTION-MACHINE.gif",
+            exerciseName: "Flexão de Perna",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif",
           },
           {
             exerciseName: "Cadeira Flexora Sentado",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif",
           },
           {
-            exerciseName: "Abdominal",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
+            exerciseName: "Cadeira Adutora",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HIP-ADDUCTION-MACHINE.gif",
           },
           {
-            exerciseName: "Abdominal - Elevação de Pernas",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Raise.gif",
+            exerciseName: "Cadeira Abdutora",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HiP-ABDUCTION-MACHINE.gif",
           },
           {
-            exerciseName: "Caminhada na Esteira - Inclinação 8º",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
+            exerciseName: "Panturrilha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Lever-Seated-Calf-Raise.gif",
           },
           {
             exerciseName: "Prancha",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif",
+          },
+          {
+            exerciseName: "Caminhada 20 min. - Inclinação 9º",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
           },
         ],
       },

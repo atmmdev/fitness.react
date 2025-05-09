@@ -4,16 +4,17 @@ import Header from "./components/Header";
 import DaySelector from "./components/DaySelector";
 import WeekSelector from "./components/WeekSelector";
 import ExerciseCard from "./components/ExerciseCard";
-// Exercises
-import { WORKOUTS } from "./data/workouts";
+// Hook
+import { useWorkoutData } from "./hooks/useWorkoutData";
 
 function App() {
-  const [selectedWeek, setSelectedWeek] = useState(WORKOUTS[0].week);
-  const [selectedDay, setSelectedDay] = useState("Segunda");
+  const [selectedWeek, setSelectedWeek] = useState("");
+  const [selectedDay, setSelectedDay] = useState("");
 
-  const selectedDayObject = WORKOUTS.find(
-    (w) => w.week === selectedWeek
-  )?.weekday.find((d) => d.day === selectedDay);
+  const { weeks, days, exercises, group } = useWorkoutData(
+    selectedWeek,
+    selectedDay
+  );
 
   return (
     <>
@@ -23,21 +24,22 @@ function App() {
             selectedWeek={selectedWeek}
             setSelectedWeek={setSelectedWeek}
             setSelectedDay={setSelectedDay}
+            weeks={weeks}
           />
         </section>
 
-        <Header groups={selectedDayObject?.group || "Selecione um dia"} />
+        <Header groups={group} />
 
         <section className="my-4">
           <DaySelector
-            selectedWeek={selectedWeek}
             selectedDay={selectedDay}
             setSelectedDay={setSelectedDay}
+            days={days}
           />
         </section>
 
         <section className="row">
-          {selectedDayObject?.exercises.map((exercise, index) => (
+          {exercises.map((exercise, index) => (
             <ExerciseCard key={index} exercise={exercise} />
           ))}
         </section>
