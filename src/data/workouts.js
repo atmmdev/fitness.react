@@ -35,10 +35,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Overhand-Triceps-Dip.gif",
           },
           {
-            exerciseName: "Kickback para Tríceps com cabo",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Tricep-Kickback.gif",
-          },
-          {
             exerciseName: "Caminhada na Esteira - Inclinação 8º",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
           },
@@ -215,20 +211,20 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif",
           },
           {
-            exerciseName: "Pullover no Banco",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Pullover.gif",
-          },
-          {
             exerciseName: "Crucifixo Máquina",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pec-Deck-Fly.gif",
+          },
+          {
+            exerciseName: "Supino Maquina Sentado",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Decline-Chest-Press-Machine.gif",
           },
           {
             exerciseName: "Supino com Halteres na Cadeira inclinada",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
           },
           {
-            exerciseName: "Supino Maquina Sentado",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Decline-Chest-Press-Machine.gif",
+            exerciseName: "Pullover no Banco",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Pullover.gif",
           },
           {
             exerciseName: "Tríceps com Halteres Sentado",
@@ -292,12 +288,12 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif",
           },
           {
-            exerciseName: "Extensão de Ombro na Polia",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Two-Arm-Cable-Front-Raise.gif",
-          },
-          {
             exerciseName: "Elevação Lateral Sentao com Halteres",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Seated-Dumbbell-Lateral-Raise.gif",
+          },
+          {
+            exerciseName: "Extensão de Ombro na Polia",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Two-Arm-Cable-Front-Raise.gif",
           },
           {
             exerciseName: "Remada Vertical na Polia",
