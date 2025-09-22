@@ -23,10 +23,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-dumbbell-Fly.gif",
           },
           {
-            exerciseName: "Tríceps na Corda, acima da cabeça",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Cable-Rope-Overhead-Triceps-Extension.gif",
-          },
-          {
             exerciseName: "Tríceps na Polia com cabo",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
           },
@@ -60,11 +56,6 @@ export const WORKOUTS = [
             exerciseName: "Agachamento com Halteres",
             img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
           },
-          {
-            exerciseName: "Afundo com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
-          },
-
           {
             exerciseName: "Abdominal",
             img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
@@ -261,11 +252,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
           },
           {
-            exerciseName: "Afundo com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
-          },
-
-          {
             exerciseName: "Abdominal",
             img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
           },
@@ -283,10 +269,6 @@ export const WORKOUTS = [
         day: "Quarta",
         group: "Ombro + Trapézio + Cardio",
         exercises: [
-          {
-            exerciseName: "Elevação Frontal com Anilha",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif",
-          },
           {
             exerciseName: "Elevação Lateral Sentao com Halteres",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Seated-Dumbbell-Lateral-Raise.gif",
@@ -427,14 +409,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/09/Alternate-Dumbbell-Bench-Press.gif",
           },
           {
-            exerciseName: "Supino com halteres pegada inversa",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Reverse-Grip-Dumbbell-Bench-Press.gif",
-          },
-          {
-            exerciseName: "Tríceps com Halteres Alternado",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/09/Dumbbell-Seated-Front-and-Back-Tate-Press.gif",
-          },
-          {
             exerciseName: "Extensão de tríceps na cadeira",
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Seated-One-Arm-Dumbbell-Triceps-Extension.gif",
           },
@@ -465,10 +439,6 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
           },
           {
-            exerciseName: "Afundo com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif",
-          },
-          {
             exerciseName: "Abdominal",
             img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Crunch.gif",
           },
@@ -495,8 +465,8 @@ export const WORKOUTS = [
             img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Lateral-Raise.gif",
           },
           {
-            exerciseName: "Remada Vertical com Halteres",
-            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Dumbbell-Upright-Row.gif",
+            exerciseName: "Elevação Frontal com Anilha",
+            img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif",
           },
           {
             exerciseName: "Elevação Lateral no Banco Inclinado",
