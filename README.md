@@ -22,7 +22,7 @@
 
 ## Description
 
-This is a project made with React and Bootstrap, for Bodybuilding training, separated by weeks and days.
+This is a project made with React and Bootstrap, for Bodybuilding training, separated by weeks and days. See the live project site: [Click Here](https://atmm.dev/treinos/).
 
 ## Images and Descriptions of Screens
 
