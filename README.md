@@ -15,7 +15,6 @@
 
 <div align="center">
 
-![PROGRESS](https://img.shields.io/badge/IN_PROGRESS-EB0A1E?style=for-the-badge&logo=flickr&logoColor=white)
 ![COMPLETE](https://img.shields.io/badge/COMPLETE-7ED321?style=for-the-badge&logo=cachet&logoColor=white)
 
 </div>
