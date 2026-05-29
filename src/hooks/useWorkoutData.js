@@ -1,21 +1,17 @@
 import { useMemo } from "react";
-import { WORKOUTS } from "../data/workouts";
+import { WORKOUT_DAYS } from "../data/workouts";
 
-export function useWorkoutData(selectedWeek, selectedDay) {
-  const weekData = useMemo(
-    () => WORKOUTS.find((w) => w.week === selectedWeek),
-    [selectedWeek]
-  );
+const WEEKDAYS = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
 
+export function useWorkoutData(selectedDay) {
   const dayData = useMemo(
-    () => weekData?.weekday.find((d) => d.day === selectedDay),
-    [weekData, selectedDay]
+    () => WORKOUT_DAYS.find((d) => d.day === selectedDay),
+    [selectedDay]
   );
 
   return {
-    weeks: WORKOUTS.map((w) => w.week) || [],
-    days: weekData?.weekday || [],
-    exercises: dayData?.exercises || [],
-    group: dayData?.group || "Selecione um dia",
+    days: WEEKDAYS.map((day) => ({ day })),
+    exercises: dayData?.exercises ?? [],
+    message: selectedDay ? `Treino — ${selectedDay}` : "Selecione um dia",
   };
 }

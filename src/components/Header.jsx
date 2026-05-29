@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Header({ groups }) {
+export default function Header({ subtitle }) {
   return (
     <>
-      <h1>TREINOS</h1>
-      <small>{groups}</small>
+      {subtitle && <h1>{subtitle}</h1>}
     </>
   );
 }

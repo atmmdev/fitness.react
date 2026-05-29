@@ -2,49 +2,33 @@ import React, { useState } from "react";
 // Components
 import Header from "./components/Header";
 import DaySelector from "./components/DaySelector";
-import WeekSelector from "./components/WeekSelector";
 import ExerciseCard from "./components/ExerciseCard";
 // Hook
 import { useWorkoutData } from "./hooks/useWorkoutData";
 
 function App() {
-  const [selectedWeek, setSelectedWeek] = useState("");
   const [selectedDay, setSelectedDay] = useState("");
 
-  const { weeks, days, exercises, group } = useWorkoutData(
-    selectedWeek,
-    selectedDay
-  );
+  const { days, exercises, message } = useWorkoutData(selectedDay);
 
   return (
-    <>
-      <main className="container mt-5 text-center">
-        <section className="my-4">
-          <WeekSelector
-            selectedWeek={selectedWeek}
-            setSelectedWeek={setSelectedWeek}
-            setSelectedDay={setSelectedDay}
-            weeks={weeks}
-          />
-        </section>
+    <main className="container mt-5 text-center">
+      <Header subtitle={message} />
 
-        <Header groups={group} />
+      <section className="my-4">
+        <DaySelector
+          selectedDay={selectedDay}
+          setSelectedDay={setSelectedDay}
+          days={days}
+        />
+      </section>
 
-        <section className="my-4">
-          <DaySelector
-            selectedDay={selectedDay}
-            setSelectedDay={setSelectedDay}
-            days={days}
-          />
-        </section>
-
-        <section className="row">
-          {exercises.map((exercise, index) => (
-            <ExerciseCard key={index} exercise={exercise} />
-          ))}
-        </section>
-      </main>
-    </>
+      <section className="row">
+        {exercises.map((exercise) => (
+          <ExerciseCard key={exercise.exerciseName} exercise={exercise} />
+        ))}
+      </section>
+    </main>
   );
 }
 
