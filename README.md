@@ -21,7 +21,7 @@
 
 ## Description
 
-This is a project made with React and Bootstrap, for Bodybuilding training, separated by weeks and days. See the live project site: [Click Here](https://atmm.dev/treinos/).
+This is a project made with React and Tailwind CSS, for Bodybuilding training, separated by weeks and days. See the live project site: [Click Here](https://atmm.dev/treinos/).
 
 ## Images and Descriptions of Screens
 
@@ -57,7 +57,7 @@ This is a project made with React and Bootstrap, for Bodybuilding training, sepa
 ### Frameworks and Libraries
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ## Running the project
 

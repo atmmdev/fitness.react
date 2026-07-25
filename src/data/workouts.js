@@ -1,314 +1,153 @@
-export const WORKOUT_DAYS = [
+const GIF =
+  "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0";
+
+const ex = (exerciseName, path) => ({
+  exerciseName,
+  img: `${GIF}/${path}`,
+});
+
+export const WORKOUTS = [
   {
-    day: "Segunda",
-    exercises: [
-      // Foco: Peito (4)
+    week: "Semana 01 — Push / Pull / Legs",
+    weekday: [
       {
-        exerciseName: "Supino Reto com Barra",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif",
+        day: "Segunda",
+        group: "Push A — Peito + Ombro + Tríceps",
+        exercises: [
+          ex("Supino Reto com Barra", "pectorals/barbell-bench-press.gif"),
+          ex("Supino Inclinado com Halteres", "pectorals/dumbbell-incline-bench-press.gif"),
+          ex("Desenvolvimento Militar com Halteres", "delts/dumbbell-seated-shoulder-press.gif"),
+          ex("Elevação Lateral com Halteres", "delts/dumbbell-lateral-raise.gif"),
+          ex("Crucifixo com Halteres", "pectorals/dumbbell-fly.gif"),
+          ex("Tríceps na Polia com Corda", "triceps/cable-pushdown-with-rope-attachment.gif"),
+          ex("Tríceps Overhead na Polia", "triceps/cable-overhead-triceps-extension-rope-attachment.gif"),
+        ],
       },
       {
-        exerciseName: "Crucifixo Reto",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pec-Deck-Fly.gif",
+        day: "Terça",
+        group: "Pull A — Costas + Bíceps + Posterior",
+        exercises: [
+          ex("Puxada Frente na Máquina", "lats/cable-bar-lateral-pulldown.gif"),
+          ex("Remada Baixa no Cabo", "upper-back/cable-low-seated-row.gif"),
+          ex("Remada Unilateral com Halter", "upper-back/dumbbell-one-arm-bent-over-row.gif"),
+          ex("Face Pull / Remada Posterior Corda", "delts/cable-rear-delt-row-with-rope.gif"),
+          ex("Pulldown Braço Reto", "lats/cable-straight-arm-pulldown-with-rope.gif"),
+          ex("Rosca Direta com Barra", "biceps/barbell-curl.gif"),
+          ex("Rosca Martelo com Corda", "biceps/cable-hammer-curl-with-rope.gif"),
+        ],
       },
       {
-        exerciseName: "Flexão de Braço",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Push-Up-Plus.gif",
+        day: "Quarta",
+        group: "Legs A — Quadríceps + Posterior + Panturrilha",
+        exercises: [
+          ex("Hack Squat", "glutes/sled-hack-squat.gif"),
+          ex("Cadeira Extensora", "quads/lever-leg-extension.gif"),
+          ex("Stiff / Romanian Deadlift", "glutes/barbell-romanian-deadlift.gif"),
+          ex("Mesa Flexora", "hamstrings/lever-lying-leg-curl.gif"),
+          ex("Panturrilha Sentado", "calves/lever-seated-calf-raise.gif"),
+          ex("Cadeira Adutora", "adductors/lever-seated-hip-adduction.gif"),
+          ex("Caminhada Inclinada 10–15 min", "cardio/walking-on-incline-treadmill.gif"),
+        ],
       },
       {
-        exerciseName: "Supino Inclinado com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
-      },
-      // Perna (3)
-      {
-        exerciseName: "LegPress 45°",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2015/11/Leg-Press.gif",
-      },
-      {
-        exerciseName: "LegPress Horizontal",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Lever-Horizontal-Leg-Press.gif",
-      },
-      {
-        exerciseName: "Panturrilha",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Lever-Seated-Calf-Raise.gif",
-      },
-      // Ombro / Trapézio (2)
-      {
-        exerciseName: "Desenvolvimento Militar",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif",
+        day: "Quinta",
+        group: "Push B — Peito + Ombro + Tríceps",
+        exercises: [
+          ex("Supino Reto com Halteres", "pectorals/dumbbell-bench-press.gif"),
+          ex("Máquina Supino Inclinada", "pectorals/lever-incline-chest-press.gif"),
+          ex("Desenvolvimento na Máquina", "delts/lever-shoulder-press.gif"),
+          ex("Elevação Lateral na Polia", "delts/cable-lateral-raise.gif"),
+          ex("Crossover de Cabo", "pectorals/cable-standing-up-straight-crossovers.gif"),
+          ex("Tríceps Sentado com Halter", "triceps/dumbbell-seated-triceps-extension.gif"),
+          ex("Tríceps Unilateral na Polia", "triceps/cable-kickback.gif"),
+        ],
       },
       {
-        exerciseName: "FacePull na Polia com Corda",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif",
-      },
-      // Bíceps (2)
-      {
-        exerciseName: "Rosca Direta com Barra",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Curl.gif",
-      },
-      {
-        exerciseName: "Rosca na Polia com corda",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/rope-bicep-curls.gif",
-      },
-      // Tríceps (2)
-      {
-        exerciseName: "Tríceps na Polia com corda",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Rope-Pushdown.gif",
-      },
-      {
-        exerciseName: "Tríceps na Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Overhand-Triceps-Dip.gif",
+        day: "Sexta",
+        group: "Pull B — Costas + Bíceps + Core",
+        exercises: [
+          ex("Remada Alta na Máquina", "upper-back/lever-high-row.gif"),
+          ex("Pulldown Barra V", "lats/cable-seated-high-row-v-bar.gif"),
+          ex("Remada Sentada Aberta", "upper-back/cable-floor-seated-wide-grip-row.gif"),
+          ex("Crucifixo Inverso / Posterior", "delts/dumbbell-rear-fly.gif"),
+          ex("Rosca Scott", "biceps/barbell-preacher-curl.gif"),
+          ex("Rosca EZ Bar", "biceps/ez-barbell-curl.gif"),
+          ex("Prancha", "abs/power-point-plank.gif"),
+        ],
       },
     ],
   },
   {
-    day: "Terça",
-    exercises: [
-      // Foco: Costas (4)
+    week: "Semana 02 — Upper / Lower",
+    weekday: [
       {
-        exerciseName: "Puxada Frente na Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif",
+        day: "Segunda",
+        group: "Upper A — Peito + Costas + Ombro + Braço",
+        exercises: [
+          ex("Supino Reto com Barra", "pectorals/barbell-bench-press.gif"),
+          ex("Remada Baixa no Cabo", "upper-back/cable-low-seated-row.gif"),
+          ex("Desenvolvimento Militar com Halteres", "delts/dumbbell-seated-shoulder-press.gif"),
+          ex("Puxada Frente na Máquina", "lats/cable-bar-lateral-pulldown.gif"),
+          ex("Elevação Lateral com Halteres", "delts/dumbbell-lateral-raise.gif"),
+          ex("Rosca Direta com Barra", "biceps/barbell-curl.gif"),
+          ex("Tríceps na Polia com Corda", "triceps/cable-pushdown-with-rope-attachment.gif"),
+          ex("Face Pull / Remada Posterior Corda", "delts/cable-rear-delt-row-with-rope.gif"),
+        ],
       },
       {
-        exerciseName: "Remada Baixa no Banco",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/close-grip-cable-row.gif",
+        day: "Terça",
+        group: "Lower A — Quadríceps + Glúteo",
+        exercises: [
+          ex("Leg Press 45°", "glutes/sled-45-leg-press.gif"),
+          ex("Cadeira Extensora", "quads/lever-leg-extension.gif"),
+          ex("Mesa Flexora", "hamstrings/lever-lying-leg-curl.gif"),
+          ex("Agachamento Goblet", "quads/dumbbell-goblet-squat.gif"),
+          ex("Panturrilha Sentado", "calves/lever-seated-calf-raise.gif"),
+          ex("Cadeira Adutora", "adductors/lever-seated-hip-adduction.gif"),
+          ex("Caminhada Inclinada 10 min", "cardio/walking-on-incline-treadmill.gif"),
+        ],
       },
       {
-        exerciseName: "Pulldown na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Rope-Straight-Arm-Pulldown.gif",
+        day: "Quarta",
+        group: "Upper B — Peito + Costas + Ombro + Braço",
+        exercises: [
+          ex("Supino Inclinado com Halteres", "pectorals/dumbbell-incline-bench-press.gif"),
+          ex("Remada Unilateral com Halter", "upper-back/dumbbell-one-arm-bent-over-row.gif"),
+          ex("Desenvolvimento na Máquina", "delts/lever-shoulder-press.gif"),
+          ex("Pulldown Barra V", "lats/cable-seated-high-row-v-bar.gif"),
+          ex("Crossover de Cabo", "pectorals/cable-standing-up-straight-crossovers.gif"),
+          ex("Rosca Scott", "biceps/barbell-preacher-curl.gif"),
+          ex("Tríceps Overhead na Polia", "triceps/cable-overhead-triceps-extension-rope-attachment.gif"),
+          ex("Crucifixo Inverso / Posterior", "delts/dumbbell-rear-fly.gif"),
+        ],
       },
       {
-        exerciseName: "Pulldown com Barra em V",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/V-bar-Lat-Pulldown.gif",
-      },
-      // Perna (3)
-      {
-        exerciseName: "Stiff Leg Deadlift",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2022/01/Stiff-Leg-Deadlift.gif",
-      },
-      {
-        exerciseName: "Mesa Flexora",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Curl.gif",
-      },
-      {
-        exerciseName: "Cadeira Extensora",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/LEG-EXTENSION.gif",
-      },
-      // Peito (2)
-      {
-        exerciseName: "Supino com Halteres Banco Reto",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press-1.gif",
+        day: "Quinta",
+        group: "Lower B — Posterior + Glúteo",
+        exercises: [
+          ex("Stiff / Romanian Deadlift", "glutes/barbell-romanian-deadlift.gif"),
+          ex("Hack Squat", "glutes/sled-hack-squat.gif"),
+          ex("Cadeira Flexora Sentado", "hamstrings/lever-seated-leg-curl.gif"),
+          ex("Cadeira Extensora (volume leve)", "quads/lever-leg-extension.gif"),
+          ex("Panturrilha no Leg Press", "calves/lever-seated-calf-press.gif"),
+          ex("Cadeira Abdutora", "abductors/lever-seated-hip-abduction.gif"),
+          ex("Caminhada Inclinada 10–15 min", "cardio/walking-on-incline-treadmill.gif"),
+        ],
       },
       {
-        exerciseName: "Crossover de Cabo baixo",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Low-Cable-Crossover.gif",
+        day: "Sexta",
+        group: "Full Leve — Compostos + Core + Cardio",
+        exercises: [
+          ex("Supino Máquina (leve)", "pectorals/lever-incline-chest-press.gif"),
+          ex("Remada Sentada (leve)", "upper-back/lever-seated-row.gif"),
+          ex("Elevação Lateral com Halteres", "delts/dumbbell-lateral-raise.gif"),
+          ex("Cadeira Extensora (leve)", "quads/lever-leg-extension.gif"),
+          ex("Rosca Martelo com Corda", "biceps/cable-hammer-curl-with-rope.gif"),
+          ex("Tríceps na Polia com Corda", "triceps/cable-pushdown-with-rope-attachment.gif"),
+          ex("Abdominal Crunch", "abs/cable-kneeling-crunch.gif"),
+          ex("Caminhada Inclinada 15–20 min", "cardio/walking-on-incline-treadmill.gif"),
+        ],
       },
-      // Ombro / Trapézio (2)
-      {
-        exerciseName: "Elevação Lateral Sentado com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Seated-Dumbbell-Lateral-Raise.gif",
-      },
-      {
-        exerciseName: "Remada Vertical na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Upright-Row.gif",
-      },
-      // Tríceps (2)
-      {
-        exerciseName: "Tríceps na Polia com Barra Reta",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif",
-      },
-      {
-        exerciseName: "Tríceps Inverso com Corda",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/One-Arm-Reverse-Push-Down.gif",
-      },
-    ],
-  },
-  {
-    day: "Quarta",
-    exercises: [
-      // Foco: Perna (4) — cardio na quarta
-      {
-        exerciseName: "Caminhada 20 minutos, Inclinada",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Incline-Treadmill.gif",
-      },
-      {
-        exerciseName: "Agachamento com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2023/01/Dumbbell-Goblet-Squat.gif",
-      },
-      {
-        exerciseName: "Hack Squat na Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Sled-Hack-Squat.gif",
-      },
-      {
-        exerciseName: "Cadeira Adutora",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HIP-ADDUCTION-MACHINE.gif",
-      },      
-      // Costas (2)
-      {
-        exerciseName: "Remada Costa na Máquina Sentado",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2022/02/Plate-Loaded-Seated-Row.gif",
-      },
-      {
-        exerciseName: "Remada com Barra em T",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lever-T-bar-Row.gif",
-      },
-      // Peito (2)
-      {
-        exerciseName: "Supino Declinado com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Decline-Dumbbell-Press.gif",
-      },
-      {
-        exerciseName: "Crossover de Cabo alto",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/High-Cable-Crossover.gif",
-      },
-      // Ombro / Trapézio (2)
-      {
-        exerciseName: "Elevação Unilateral na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Lateral-Raise.gif",
-      },
-      {
-        exerciseName: "Cruscifixo Inverso na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2022/04/Cross-Cable-Face-Pull.gif",
-      },
-      // Bíceps (2)
-      {
-        exerciseName: "Banco Scott",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Z-Bar-Preacher-Curl.gif",
-      },
-      {
-        exerciseName: "Rosca Alternada com Halteres no Banco Scott",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/dumbbell-scot-curl.gif",
-      },
-      // Tríceps (1)
-      {
-        exerciseName: "Extensão de Tríceps com corda",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Cable-Rope-Overhead-Triceps-Extension.gif",
-      },
-    ],
-  },
-  {
-    day: "Quinta",
-    exercises: [
-      // Foco: Ombro / Trapézio (4)
-      {
-        exerciseName: "Desenvolvimento Ombro Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Shoulder-Press.gif",
-      },
-      {
-        exerciseName: "Elevação Frontal alternada com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Alternating-Dumbbell-Front-Raise.gif",
-      },
-      {
-        exerciseName: "Cruscifixo Inverso na Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Rear-Delt-Machine-Flys.gif",
-      },
-      {
-        exerciseName: "Elevação Lateral em pé com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif",
-      },
-      // Perna (2)
-      {
-        exerciseName: "Cadeira Flexora",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif",
-      },
-      {
-        exerciseName: "Cadeira Abdutora",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/HiP-ABDUCTION-MACHINE.gif",
-      },
-      // Costas (3)
-      {
-        exerciseName: "Remada Unilateral Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2023/06/Lever-High-Row.gif",
-      },
-      {
-        exerciseName: "Pulldown Reverso na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2022/01/Cable-Crossover-Lat-Pulldown.gif",
-      },
-      {
-        exerciseName: "Remada Aberta Barra Reta Sentado",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif",
-      },
-      // Peito (2)
-      {
-        exerciseName: "Máquina Supino Inclinada",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/09/Lever-Incline-Hammer-Chest-Press.gif",
-      },
-      {
-        exerciseName: "Pullover no banco",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Pullover.gif",
-      },
-      // Bíceps (1)
-      {
-        exerciseName: "Rosca Alternada com Halteres em pé",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Curl.gif",
-      },
-      // Tríceps (1)
-      {
-        exerciseName: "Tríceps Sentado com Halter",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Seated-Dumbbell-Triceps-Extension.gif",
-      },
-    ],
-  },
-  {
-    day: "Sexta",
-    exercises: [
-      // Foco: Bíceps (2)
-      {
-        exerciseName: "Rosca Alternada no Banco Inclinado",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Incline-Dumbbell-Curl.gif",
-      },
-      {
-        exerciseName: "Rosca 21 com barra W",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Reverse-Grip-EZ-Bar-Curl.gif",
-      },
-      {
-        exerciseName: "Rosca Direta na Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Preacher-Curl.gif",
-      },
-      // Foco: Tríceps (2)
-      {
-        exerciseName: "Tríceps Unilateral com corda",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Tricep-Kickback.gif",
-      },
-      {
-        exerciseName: "Tríceps no Banco",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Lever-Overhand-Triceps-Dip.gif",
-      },
-      // Costas (3)
-      {
-        exerciseName: "Puxada Unilateral na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Cable-One-Arm-Lat-Pulldown.gif",
-      },
-      {
-        exerciseName: "Remada no Banco com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif",
-      },
-      {
-        exerciseName: "Remada Fechada Barra Reta Sentado",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif",
-      },
-      // Peito (3)
-      {
-        exerciseName: "Crucifixo Inclinado com Halteres",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-dumbbell-Fly.gif",
-      },
-      {
-        exerciseName: "Supino Maquina Sentado",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Decline-Chest-Press-Machine.gif",
-      },
-      {
-        exerciseName: "Supino Interno Máquina",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/06/Inner-Chest-Press-Machine.gif",
-      },
-      // Ombro / Trapézio (2)
-      {
-        exerciseName: "Extensão de Ombro na Polia",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/08/Two-Arm-Cable-Front-Raise.gif",
-      },
-      {
-        exerciseName: "Elevação Frontal com Halter",
-        img: "https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif",
-      }      
     ],
   },
 ];

@@ -1,5 +1,4 @@
 import React from "react";
-// Components
 import Button from "./Button";
 
 export default function WeekSelector({
@@ -9,23 +8,20 @@ export default function WeekSelector({
   weeks,
 }) {
   return (
-    <>
-      {weeks.map((week, index) => (
+    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+      {weeks.map((week) => (
         <Button
-          key={index}
+          key={week}
+          variant="week"
+          active={selectedWeek === week}
           onClick={() => {
             setSelectedWeek(week);
-            setSelectedDay("");
+            setSelectedDay((current) => current || "Segunda");
           }}
-          className={
-            selectedWeek === week
-              ? "btn btn-outline-light active m-2"
-              : "btn btn-outline-light m-2"
-          }
         >
           {week}
         </Button>
       ))}
-    </>
+    </div>
   );
 }

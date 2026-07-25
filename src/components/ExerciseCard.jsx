@@ -2,15 +2,16 @@ import React from "react";
 
 export default function ExerciseCard({ exercise }) {
   return (
-    <div className="col-6 col-md-3 my-2 text-center">
+    <article className="flex flex-col items-center text-center">
       <img
-        className="img-fluid rounded"
+        className="w-full rounded-xl object-cover aspect-square bg-surface-soft"
         src={exercise.img}
         alt={exercise.exerciseName}
+        loading="lazy"
       />
-      <small className="my-2 text-uppercase d-block">
+      <p className="mt-2 text-xs sm:text-sm uppercase tracking-wide text-ink-muted leading-snug">
         {exercise.exerciseName}
-      </small>
-    </div>
+      </p>
+    </article>
   );
 }

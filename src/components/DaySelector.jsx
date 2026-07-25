@@ -1,23 +1,19 @@
 import React from "react";
-// Components
 import Button from "./Button";
 
 export default function DaySelector({ selectedDay, setSelectedDay, days }) {
   return (
-    <>
-      {days.map((day, index) => (
+    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+      {days.map((day) => (
         <Button
-          key={index}
+          key={day.day}
+          variant="week"
+          active={selectedDay === day.day}
           onClick={() => setSelectedDay(day.day)}
-          className={
-            selectedDay === day.day
-              ? "btn btn-outline-light active m-2"
-              : "btn btn-outline-light m-2"
-          }
         >
           {day.day}
         </Button>
       ))}
-    </>
+    </div>
   );
 }

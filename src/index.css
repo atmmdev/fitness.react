@@ -1,4 +1,19 @@
-* {
-  color: #ccc;
-  background-color: #2f3542;
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #2f3542;
+  --color-surface-soft: #3a4252;
+  --color-ink: #d1d5db;
+  --color-ink-muted: #9ca3af;
+  --color-accent: #e5e7eb;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
 }
